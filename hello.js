@@ -8,15 +8,12 @@ const indexFile = '/index.html';
 const server = http.createServer( ( req, res )=>{
 
   
-  const fileName = req.url = '/'
-  ? indexFile
+  req.url == '/'
+  ? req.url = indexFile 
   : req.url;
-
-  console.log(req.url);
 
   const file = `${ StaticFolder }${ req.url }`;
 
-  console.log(file);
 
     fs.readFile( file, ( err, data )=>{
 
