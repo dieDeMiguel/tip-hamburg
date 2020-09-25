@@ -1,7 +1,7 @@
 const fs   = require( 'fs' );
 const http = require( 'http' );
 
-const Port         = 3000;
+var port = process.env.PORT || 8080;
 const StaticFolder = "./public"; // "./public"
 const indexFile = '/index.html';
 
