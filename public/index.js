@@ -17,6 +17,7 @@ function update() {
     let tipValue = bill * (tipPercent / 100);
     let tipEach = tipValue / split;
     let newBillEach = (bill + tipValue) / split;
+    let totalEach = tipEach + newBillEach;
 
     document.getElementById("tipPercent").innerHTML = tipPercent + "%";
     document.getElementById("tipValue").innerHTML = formatMoney(tipValue);
@@ -24,6 +25,7 @@ function update() {
     document.getElementById("splitValue").innerHTML = formatSplit(split);
     document.getElementById("billEach").innerHTML = formatMoney(newBillEach);
     document.getElementById("tipEach").innerHTML = formatMoney(tipEach);
+    document.getElementById("totalEach").innerHTML = formatMoney(totalEach);
 }
 
 let container = document.getElementById("container");
