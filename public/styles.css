@@ -100,5 +100,13 @@ input[type=number] {
 }
 
 #container {
-    margin-top: 80px;;
+    margin-top: 60px;;
 }
+
+@media screen and (max-width: 600px) {
+    #container {
+        margin-top: 20px;;
+    }
+  }
+
+  
